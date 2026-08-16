@@ -7,6 +7,9 @@ const ACCELERATION_SMOOTHING = 25
 @onready var health_component = $HealthComponent
 @onready var health_bar = $HealthBar
 @onready var abilities = $Abilities
+@onready var animation_player = $AnimationPlayer
+@onready var visuals = $Visuals
+
 
 var number_colliding_bodies = 0
 
@@ -28,7 +31,17 @@ func _physics_process(_delta: float) -> void:
 	var target_velocity = direction * MAX_SPEED
 	velocity = velocity.lerp(target_velocity, 1 - exp(-_delta * ACCELERATION_SMOOTHING)) 
 	move_and_slide()
-
+	
+	if movement_vector.x !=0 || movement_vector.y !=0 :
+		animation_player.play("walk")
+	else:
+		animation_player.play("RESET")
+		
+	var move_sign = sign(movement_vector.x)
+	if move_sign == 0:
+		visuals.scale = Vector2.ONE
+	else:
+		visuals.scale = Vector2(move_sign, 1)
 
 # 读取四个方向 action 的强度，合成一个未归一化的方向向量。
 # Read the four directional actions into a single un-normalized direction vector.
