@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://drlvp0txr3eo7"]
+
+[ext_resource type="Script" uid="uid://cxvb2upiyhvgu" path="res://scenes/manger/arena_time_manager.gd" id="1_d6aq2"]
+[ext_resource type="PackedScene" uid="uid://bcyrndvg1i244" path="res://scenes/ui/end_screen.tscn" id="2_1g5qc"]
+
+[node name="ArenaTimeManager" type="Node" unique_id=1035402632]
+script = ExtResource("1_d6aq2")
+end_screen_scene = ExtResource("2_1g5qc")
+
+[node name="Timer" type="Timer" parent="." unique_id=1085535598]
+wait_time = 600.0
+one_shot = true
+autostart = true
