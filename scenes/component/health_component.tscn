@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dbhpk2hwhgpg4"]
+
+[ext_resource type="Script" uid="uid://bho3e70p4sew1" path="res://scenes/component/health_component.gd" id="1_sa7ac"]
+
+[node name="HealthComponent" type="Node" unique_id=1865584554]
+script = ExtResource("1_sa7ac")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1651162875]
