@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_pyxp1")
-id = "axe"
-name = "Axe"
-description = "Periodically sends out a spinning axe."
+id = "sword_id"
+name = "Sword_Quickness"
+description = "Increases sword attackrate by 10%"

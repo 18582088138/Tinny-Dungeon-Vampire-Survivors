@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="godot_project"
-config/description="2D top-down survivors-like arena roguelite (Godot 4.7.1, GDScript)"
+config/description="Godot 4.7.1 experiment sandbox"
 run/main_scene="res://scenes/main/main.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
@@ -31,6 +31,10 @@ window/size/viewport_height=360
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdUnit4/plugin.cfg")
 
 [global_group]
 
