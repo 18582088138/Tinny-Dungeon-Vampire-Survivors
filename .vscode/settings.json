@@ -1,0 +1,24 @@
+{
+  "godotTools.editorPath.godot4": "c:\\Users\\kundaxu\\Downloads\\Godot_v4.7.1-stable_win64.exe\\Godot_v4.7.1-stable_win64.exe",
+  "godotTools.lsp.serverHost": "127.0.0.1",
+  "godotTools.lsp.serverPort": 6005,
+  "godotTools.lsp.headless": false,
+  "files.associations": {
+    "*.gd": "gdscript",
+    "*.tres": "gdresource",
+    "*.tscn": "gdresource"
+  },
+  "[gdscript]": {
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "editor.trimAutoWhitespace": false
+  },
+  "files.exclude": {
+    "**/.godot": true
+  },
+  "search.exclude": {
+    "**/.godot": true,
+    "addons/gdUnit4/**": true
+  }
+}

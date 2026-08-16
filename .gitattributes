@@ -1,0 +1,27 @@
+* text=auto eol=lf
+
+# Godot text formats — keep LF so diffs stay clean across machines
+*.gd    text eol=lf
+*.tscn  text eol=lf
+*.tres  text eol=lf
+*.godot text eol=lf
+*.cfg   text eol=lf
+*.uid   text eol=lf
+
+# Windows scripts need CRLF to run
+*.cmd   text eol=crlf
+*.bat   text eol=crlf
+
+# Binaries — never touch
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.svg   text eol=lf
+*.ttf   binary
+*.otf   binary
+*.wav   binary
+*.ogg   binary
+*.mp3   binary
+*.glb   binary
+*.import text eol=lf

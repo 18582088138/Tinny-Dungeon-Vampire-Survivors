@@ -1,0 +1,35 @@
+# Godot 4+ editor cache / generated data
+.godot/
+/android/
+
+# Exported builds and export config (may contain keystore paths / secrets)
+/build/
+/export/
+export_presets.cfg
+
+# Rendered verification frames / test reports
+/reports/
+
+# Third-party addons — deliberately NOT vendored into this repo.
+/addons/
+
+# Kenney art pack as downloaded. The files the game actually uses were copied
+# into assets/ and scenes/, so shipping the raw pack again is redundant.
+/TinnyDungeon/
+
+# Machine-local Claude Code config: absolute paths + personal permission list
+.claude/settings.local.json
+.mcp.json
+
+# Godot atomic-save leftovers (main.tscn<digits>.tmp, tile_0096.png<digits>.tmp, ...)
+*.tmp
+
+# OS + editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# Node (only if a tool ever gets vendored in here)
+node_modules/
