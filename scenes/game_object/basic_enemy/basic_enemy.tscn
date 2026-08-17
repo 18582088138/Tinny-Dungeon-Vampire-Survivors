@@ -6,6 +6,68 @@
 [ext_resource type="PackedScene" uid="uid://dhvfna15k2lny" path="res://scenes/component/vial_drop_component.tscn" id="3_pcrk2"]
 [ext_resource type="PackedScene" uid="uid://bsfer2bf20ihd" path="res://scenes/component/hurtbox_component.tscn" id="4_elloc"]
 
+[sub_resource type="Animation" id="Animation_elloc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_bq7hi"]
+resource_name = "walk"
+length = 0.39999999999999997
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1, 0), Vector2(1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/Sprite2D:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.13962634015954636, 0.13962634015954636, -0.13962634015954636, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jkye5"]
+_data = {
+&"RESET": SubResource("Animation_elloc"),
+&"walk": SubResource("Animation_bq7hi")
+}
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_elloc"]
 radius = 12.0
 
@@ -17,6 +79,9 @@ collision_layer = 8
 collision_mask = 9
 motion_mode = 1
 script = ExtResource("1_isd1k")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=401281967]
+libraries/ = SubResource("AnimationLibrary_jkye5")
 
 [node name="HealthComponent" parent="." unique_id=1865584554 instance=ExtResource("2_pcrk2")]
 
@@ -30,7 +95,9 @@ health_component = NodePath("../HealthComponent")
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_elloc")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=118716825 groups=["enemy", "player"]]
+[node name="Visuals" type="Node2D" parent="." unique_id=1313112399]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals" unique_id=118716825 groups=["enemy", "player"]]
 texture = ExtResource("3_elloc")
 offset = Vector2(0, -4)
 
