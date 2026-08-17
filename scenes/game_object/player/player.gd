@@ -38,9 +38,7 @@ func _physics_process(_delta: float) -> void:
 		animation_player.play("RESET")
 		
 	var move_sign = sign(movement_vector.x)
-	if move_sign == 0:
-		visuals.scale = Vector2.ONE
-	else:
+	if move_sign != 0:
 		visuals.scale = Vector2(move_sign, 1)
 
 # 读取四个方向 action 的强度，合成一个未归一化的方向向量。
