@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dbhpk2hwhgpg4" path="res://scenes/component/health_component.tscn" id="2_pcrk2"]
 [ext_resource type="Texture2D" uid="uid://c661rth1jjjh6" path="res://scenes/game_object/basic_enemy/basic_enemy.png" id="3_elloc"]
 [ext_resource type="PackedScene" uid="uid://dhvfna15k2lny" path="res://scenes/component/vial_drop_component.tscn" id="3_pcrk2"]
+[ext_resource type="PackedScene" uid="uid://3be0g73s4mkr" path="res://scenes/component/death_componet.tscn" id="4_bq7hi"]
 [ext_resource type="PackedScene" uid="uid://bsfer2bf20ihd" path="res://scenes/component/hurtbox_component.tscn" id="4_elloc"]
 
 [sub_resource type="Animation" id="Animation_elloc"]
@@ -87,6 +88,10 @@ libraries/ = SubResource("AnimationLibrary_jkye5")
 
 [node name="VialDropComponent" parent="." unique_id=535556554 node_paths=PackedStringArray("health_component") instance=ExtResource("3_pcrk2")]
 health_component = NodePath("../HealthComponent")
+
+[node name="DeathComponet" parent="." unique_id=1750488871 node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("4_bq7hi")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
 
 [node name="HurtboxComponent" parent="." unique_id=1817543134 node_paths=PackedStringArray("health_component") instance=ExtResource("4_elloc")]
 health_component = NodePath("../HealthComponent")
