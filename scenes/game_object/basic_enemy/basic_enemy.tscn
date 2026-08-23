@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dhvfna15k2lny" path="res://scenes/component/vial_drop_component.tscn" id="3_pcrk2"]
 [ext_resource type="PackedScene" uid="uid://3be0g73s4mkr" path="res://scenes/component/death_componet.tscn" id="4_bq7hi"]
 [ext_resource type="PackedScene" uid="uid://bsfer2bf20ihd" path="res://scenes/component/hurtbox_component.tscn" id="4_elloc"]
+[ext_resource type="PackedScene" uid="uid://bkxjc6afrn4st" path="res://scenes/component/velocity_componet.tscn" id="4_jkye5"]
 
 [sub_resource type="Animation" id="Animation_elloc"]
 length = 0.001
@@ -36,7 +37,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_bq7hi"]
 resource_name = "walk"
-length = 0.39999999999999997
+length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -87,7 +88,10 @@ libraries/ = SubResource("AnimationLibrary_jkye5")
 [node name="HealthComponent" parent="." unique_id=1865584554 instance=ExtResource("2_pcrk2")]
 
 [node name="VialDropComponent" parent="." unique_id=535556554 node_paths=PackedStringArray("health_component") instance=ExtResource("3_pcrk2")]
+drop_percent = 0.35
 health_component = NodePath("../HealthComponent")
+
+[node name="VelocityComponet" parent="." unique_id=457726042 instance=ExtResource("4_jkye5")]
 
 [node name="DeathComponet" parent="." unique_id=1750488871 node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("4_bq7hi")]
 health_component = NodePath("../HealthComponent")
