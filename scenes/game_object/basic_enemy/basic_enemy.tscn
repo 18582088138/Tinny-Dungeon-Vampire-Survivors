@@ -84,6 +84,7 @@ script = ExtResource("1_isd1k")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=401281967]
 libraries/ = SubResource("AnimationLibrary_jkye5")
+autoplay = &"walk"
 
 [node name="HealthComponent" parent="." unique_id=1865584554 instance=ExtResource("2_pcrk2")]
 
