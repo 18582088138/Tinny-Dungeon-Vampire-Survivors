@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bkxjc6afrn4st" path="res://scenes/component/velocity_componet.tscn" id="3_rquut"]
 [ext_resource type="Script" uid="uid://dydeqigwe5xr3" path="res://scenes/component/hurtbox_component.gd" id="4_rquut"]
 [ext_resource type="PackedScene" uid="uid://dhvfna15k2lny" path="res://scenes/component/vial_drop_component.tscn" id="4_sjtyn"]
+[ext_resource type="PackedScene" uid="uid://rpbi6kh44qt2" path="res://scenes/component/hit_flash_component.tscn" id="5_74qiw"]
+[ext_resource type="Shader" uid="uid://0rwe0qajms2c" path="res://scenes/component/hit_flash_component.gdshader" id="6_h4ano"]
 
 [sub_resource type="Animation" id="Animation_rquut"]
 length = 0.001
@@ -112,6 +114,11 @@ _data = {
 &"walk": SubResource("Animation_sjtyn")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7kpoi"]
+resource_local_to_scene = true
+shader = ExtResource("6_h4ano")
+shader_parameter/lerp_percent = 0.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_wh74f"]
 radius = 8.0
 
@@ -137,6 +144,11 @@ acceleration = 10.0
 
 [node name="VialDropComponent" parent="." unique_id=535556554 node_paths=PackedStringArray("health_component") instance=ExtResource("4_sjtyn")]
 health_component = NodePath("../HealthComponent")
+
+[node name="HitFlashComponent" parent="." unique_id=2071939061 node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("5_74qiw")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
+hit_flash_material = SubResource("ShaderMaterial_7kpoi")
 
 [node name="DeathComponet" parent="." unique_id=1750488871 node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("2_qgqx6")]
 health_component = NodePath("../HealthComponent")
