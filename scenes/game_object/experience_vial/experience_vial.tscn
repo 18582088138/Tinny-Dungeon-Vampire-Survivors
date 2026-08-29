@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://camjvynfkbi2" path="res://scenes/game_object/experience_vial/experience_vial.png" id="1_krkhv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hh5i8"]
+radius = 15.0
 
 [node name="ExperienceVial" type="Node2D" unique_id=1165425487]
 script = ExtResource("1_jmuu1")
