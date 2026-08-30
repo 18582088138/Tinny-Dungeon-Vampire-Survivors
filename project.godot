@@ -38,6 +38,7 @@ player=""
 enemy=""
 foreground_layer=""
 entities_layer=""
+upgrade_card=""
 
 [gui]
 
