@@ -15,9 +15,7 @@ func _ready():
 
 func play_in(delay: float = 0):
 	modulate = Color.TRANSPARENT
-	#scale = Vector2.ZERO
 	await get_tree().create_timer(delay).timeout
-	#modulate = Color.WHITE
 	$AnimationPlayer.play("in")
 
 func play_discard():
