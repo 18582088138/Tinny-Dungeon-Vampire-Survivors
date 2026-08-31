@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://brf2hdrqfyt5b" path="res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn" id="2_gmlin"]
 [ext_resource type="Script" uid="uid://c3n6u3ml75x7n" path="res://scenes/game_object/player/player.gd" id="2_mv1qc"]
 [ext_resource type="Script" uid="uid://bho3e70p4sew1" path="res://scenes/component/health_component.gd" id="2_ss5pk"]
+[ext_resource type="PackedScene" uid="uid://bkxjc6afrn4st" path="res://scenes/component/velocity_componet.tscn" id="2_tj6oj"]
 
 [sub_resource type="Animation" id="Animation_ss5pk"]
 length = 0.001
@@ -116,6 +117,10 @@ script = ExtResource("2_mv1qc")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1405617736]
 libraries/ = SubResource("AnimationLibrary_pknkg")
+
+[node name="VelocityComponet" parent="." unique_id=457726042 instance=ExtResource("2_tj6oj")]
+max_speed = 90
+acceleration = 25.0
 
 [node name="HealthComponent" type="Node" parent="." unique_id=117969369]
 script = ExtResource("2_ss5pk")
